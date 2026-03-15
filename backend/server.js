@@ -15,10 +15,11 @@ app.use('/api/admin', require('./routes/admin'));
 
 // 2. Frontend Files Serve Karna (Naya logic)
 // Ye line backend ko batati hai ki 'dist' folder mein website rakhi hai
+// Ye code purane wale ko replace karega
 const _dirname = path.resolve();
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
+// Frontend ki files 'frontend/dist' folder mein hain
+app.use(express.static(path.join(_dirname, "frontend", "dist")));
 
-// 3. Agar koi anjaan link khole, toh use index.html par bhejein
 app.get('*', (req, res) => {
   res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
 });
