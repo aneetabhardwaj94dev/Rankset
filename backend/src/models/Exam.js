@@ -10,7 +10,7 @@ const examSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-examSchema.index({ slug: 1 });
+// slug: unique index already from schema option
 examSchema.index({ language: 1, isActive: 1 });
 
 module.exports = mongoose.model('Exam', examSchema);
