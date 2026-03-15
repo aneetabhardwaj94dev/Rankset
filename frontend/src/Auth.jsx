@@ -12,7 +12,7 @@ const Auth = ({ onLoginSuccess }) => {
     
     // Yahan hum backend ko data bhejenge
     try {
-      const response = await fetch(`https://rankset-backend.onrender.com${endpoint}`, {
+      const response = await fetch(`https://rankset-4nlg.onrender.com${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

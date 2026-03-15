@@ -22,7 +22,7 @@ const AdminDashboard = () => {
         console.log("Parsed Questions:", results.data);
         // Backend API Call
         try {
-          const response = await fetch('https://rankset-backend.onrender.com/api/admin/bulk-upload', {
+          const response = await fetch('https://rankset-4nlg.onrender.com/api/admin/bulk-upload', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(results.data),
