@@ -18,6 +18,9 @@ mongoose.connect(process.env.MONGO_URI)
 const PORT = process.env.PORT || 5000;
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/auth', require('./routes/auth'));
+app.get('/', (req, res) => {
+  res.send('Rankset API is running successfully!');
+});
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
